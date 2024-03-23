@@ -240,6 +240,8 @@ class OffboardControl(Node):
         msg.timestamp = int(Clock().now().nanoseconds / 1000) # time in microseconds
         self.vehicle_command_publisher_.publish(msg)
 
+
+# s,kfklsl;f;'
     #receives and sets vehicle status values 
     def vehicle_status_callback(self, msg):
 

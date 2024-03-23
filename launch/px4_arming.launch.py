@@ -43,33 +43,33 @@ import os
 
 
 def generate_launch_description():
-    package_dir = get_package_share_directory('px4_offboard')
+    package_dir = get_package_share_directory('px4_arming')
     # bash_script_path = os.path.join(package_dir, 'scripts', 'TerminatorScript.sh')
     return LaunchDescription([
         # ExecuteProcess(cmd=['bash', bash_script_path], output='screen'),
         Node(
-            package='px4_offboard',
-            namespace='px4_offboard',
+            package='px4_arming',
+            namespace='px4_arming',
             executable='visualizer',
             name='visualizer'
         ),
         Node(
-            package='px4_offboard',
-            namespace='px4_offboard',
+            package='px4_arming',
+            namespace='px4_arming',
             executable='processes',
             name='processes',
             prefix='gnome-terminal --'
         ),
         Node(
-            package='px4_offboard',
-            namespace='px4_offboard',
+            package='px4_arming',
+            namespace='px4_arming',
             executable='control',
             name='control',
             prefix='gnome-terminal --',
         ),
         Node(
-            package='px4_offboard',
-            namespace='px4_offboard',
+            package='px4_arming',
+            namespace='px4_arming',
             executable='velocity_control',
             name='velocity'
         ),
